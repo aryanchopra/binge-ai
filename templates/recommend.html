@@ -9,6 +9,9 @@
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -108,11 +111,11 @@
 
   <center>
     {% if reviews %}
-    <h2 style="color:white">USER REVIEWS</h2>
+    <h2 style="color:white">User Reviews</h2>
      <div class="col-md-12" style="margin: 0 auto; margin-top:25px;">
         <table class="table table-bordered" bordercolor="white" style="color:white">
             <thead>
-                <tr>
+                <tr style="background: rgba(0, 0, 0, 0.5)">
                     <th class="text-center" scope="col" style="width: 75%">Comments</th>
                     <th class="text-center" scope="col">Sentiments</th>
                 </tr>
@@ -120,7 +123,7 @@
     
             <tbody>
 		      {% for review, status in reviews.items() if not reviews.hidden %}
-		      <tr style="background-color:#e5091485;">
+		      <tr style="background: rgba(0, 0, 0, 0.5)">
               	  <td>{{review}}</td>
 	              <td><center>
 	                  {{status}} : 
@@ -147,7 +150,7 @@
 
 
       <div class="movie" style="color: #E8E8E8;">
-      <center><h3>RECOMMENDED MOVIES FOR YOU</h3><h5>(Click any of the movies to get recommendation)</h5></center>
+      <center><h3>Recommendations for you:</h3><h5>(Click any of the movies to know more about it.)</h5></center>
     </div>
 
     <div class="movie-content">
@@ -156,11 +159,11 @@
           <div class="imghvr">
             <img class="card-img-top" height="360" width="240" alt="{{title}} - poster" src={{poster}}>
             <figcaption class="fig">
-              <button class="card-btn btn btn-danger"> Click Me </button>
+              <button class="card-btn btn btn-danger"> Details </button>
             </figcaption>
            </div>
           <div class="card-body">
-            <h5 class="card-title">{{title|capitalize}}</h5>
+            <h5 class="card-title">{{title | title}}</h5>
           </div>
         </div>
     {% endfor %}

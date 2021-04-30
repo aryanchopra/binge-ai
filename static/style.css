@@ -5,6 +5,7 @@
 	resize: none;
 }
 
+
 .movie-content {
 	display: flex;
 	flex-wrap: wrap;
@@ -23,10 +24,14 @@
 	color: #e4e0e0;
 }
 
-#content {
-	background-image: url("../static/image.jpg");
+body {
+	
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)
+	  ),url("../static/image.jpg");
 	background-color: #181818;
-	font-family: 'Noto Sans JP', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 #details {
@@ -43,7 +48,7 @@
 }
 
 h1 {
-    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Bebas Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #e50914;
     font-weight: bold;
     margin-top: 30px;
